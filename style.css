@@ -5,6 +5,9 @@
 .menu h1{
 	display: inline-block;
 }
+.menu_titulo{
+	font-size: 350%;
+}
 .categorias{
 	display: flex;
 	justify-content: space-around;
@@ -14,8 +17,10 @@
 }
 .categoria h1{
 	display: inline-block;
-
 }
 #btn_play{
 	display: none;
+}
+.respuestas{
+	padding: 50px;
 }

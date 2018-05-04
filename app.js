@@ -1,124 +1,119 @@
 var name = prompt('¿Cuál es tu Nombre');
 var menu_bienvenido = document.getElementById('menu_bienvenidoHtml');
-
 menu_bienvenido.innerHTML=' Bienvenido : ' + name.toUpperCase();
-
+//CONFIRMACION AL JUEGO
 if(confirm(' Hola! ' + name.toUpperCase()  +'\n ¿Te Animas a Jugar? ')){
   alert( ' Muy bien ' + name.toUpperCase() + ' Entonces Comencemos!');
   preguntas();
 } else {
       alert (' Que lastima, visitanos pronto');
 }
-
+//PREGUNTAS PARA CADA CATEGORIA
 function preguntas(){
 	var categoria =prompt('POR FAVOR SELECCIONA QUE CATEGORIA QUIERES JUGAR: \n '+ '1.DEPORTES \n 2.CULTURA GENERAL \n 3.TECNOLOGIA \n 4.PELICULAS');
 	switch (categoria){
 		case('1'):
-			var pregunta1 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta2 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta3 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var respuesta1 = "si",
-				respuesta2 = "no",
-				respuesta3 = "si",
-				puntaje1	= 0 ;
+			var pregunta1 = prompt('¿En qué País fueron las Olimpiada 2016?');
+			var pregunta2 = prompt('¿En que año Peú participó por última vez en un Mundial de Fútbol?');
+			var pregunta3 = prompt('¿Apellido del actual DT del equipo de Peú?');
+			var respuesta1 = "brasil";
+			var respuesta2 = "1982";
+			var respuesta3 = "gareca";
+			var aciertos1	= 0;
 			if (pregunta1 == respuesta1) {
-	    		puntaje1++;
+	    		aciertos1++;
 			}
 			if(pregunta2 == respuesta2){
-	    		puntaje1++;
+	    		aciertos1++;
 			}
 			if(pregunta3 == respuesta3){
-	    		puntaje1++;
+	    		aciertos1++;
 			}
-			console.log(puntaje1);
 			if(confirm("Desea seguir jugando?")){
 				preguntas();
 			}else{
 				alert("adios");
 				document.getElementById('btn_play').style.display="block";
-				document.getElementsByClassName('categoria_uno_r')[0].innerHTML = "Puntos: "+puntaje1;
+				document.getElementsByClassName('categoria_uno_r')[0].innerHTML = "ACIERTOS: "+aciertos1;
 			}
 			break;
 		case('2'):
-			var pregunta1 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta2 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta3 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var respuesta1 = "si",
-				respuesta2 = "no",
-				respuesta3 = "si",
-				puntaje2	   = 0 ;
+			var pregunta1 = prompt('¿En que País se encuentra el TajMahal?');
+			var pregunta2 = prompt('¿Quién escribió la Odisea?');
+			var pregunta3 = prompt('¿Cuál es la moneda del Reino Unido?');
+			var respuesta1 = "india";
+			var respuesta2 = "homero";
+			var respuesta3 = "libra";
+			var aciertos2 = 0 ;
 			if (pregunta1 == respuesta1) {
-	    		puntaje2++;
+	    		aciertos2++;
 			}
 			if(pregunta2 == respuesta2){
-	    		puntaje2++;
+	    		aciertos2++;
 			}
 			if(pregunta3 == respuesta3){
-	    		puntaje2++;
+	    		aciertos2++;
 			}
-			console.log(puntaje2);
 			if(confirm("Desea seguir jugando?")){
 				preguntas();
 			}else{
 				alert("adios");
 				document.getElementById('btn_play').style.display="block";
-				document.getElementsByClassName('categoria_dos_r')[0].innerHTML = "Puntos: "+puntaje2;
+				document.getElementsByClassName('categoria_dos_r')[0].innerHTML = "ACIERTOS: "+aciertos2;
 			}
 			break;
 		case('3'):
-			var pregunta1 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta2 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta3 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var respuesta1 = "si",
-				respuesta2 = "no",
-				respuesta3 = "si",
-				puntaje3	   = 0 ;
+			var pregunta1 = prompt('¿Cuál fue el primer Viode Juego?');
+			var pregunta2 = prompt('¿En qué año fue lanzado IPAD?');
+			var pregunta3 = prompt('¿Quién desarrolló el lenguaje JavaScript?');
+			var respuesta1 = "pong";
+			var respuesta2 = "2010";
+		  var respuesta3 = "brendan eich";
+			var aciertos3	 = 0 ;
 			if (pregunta1 == respuesta1) {
-	    		puntaje3++;
+	    		aciertos3++;
 			}
 			if(pregunta2 == respuesta2){
-	    		puntaje3++;
+	    		aciertos3++;
 			}
 			if(pregunta3 == respuesta3){
-	    		puntaje3++;
+	    		aciertos3++;
 			}
-			console.log(puntaje3);
 			if(confirm("Desea seguir jugando?")){
 				preguntas();
 			}else{
 				alert("adios");
 				document.getElementById('btn_play').style.display="block";
-				document.getElementsByClassName('categoria_tres_r')[0].innerHTML = "Puntos: "+puntaje3;
+				document.getElementsByClassName('categoria_tres_r')[0].innerHTML = "ACIERTOS: "+aciertos3;
 			}
 			break;
 		case('4'):
-			var pregunta1 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta2 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var pregunta3 = prompt('¿Brendan Eich desarrolló el lenguaje JavaScript?');
-			var respuesta1 = "si",
-				respuesta2 = "no",
-				respuesta3 = "si",
-				puntaje4	   = 0 ;
+			var pregunta1 = prompt('¿La película "The Shape of water" la forma del agua, ganó el Oscar el 2017?');
+			var pregunta2 = prompt('¿Fue Jhony Deep el actor protagonista en la película Moonligh');
+			var pregunta3 = prompt('¿Es Birdman una película del género Comedia dramática');
+			var respuesta1 = "si";
+			var respuesta2 = "no";
+			var respuesta3 = "si";
+			var aciertos4	 = 0 ;
 			if (pregunta1 == respuesta1) {
-	    		puntaje4++;
+	    		aciertos4++;
 			}
 			if(pregunta2 == respuesta2){
-	    		puntaje4++;
+	    		aciertos4++;
 			}
 			if(pregunta3 == respuesta3){
-	    		puntaje4++;
+	    		aciertos4++;
 			}
-			console.log(puntaje4);
 			if(confirm("Desea seguir jugando?")){
 				preguntas();
 			}else{
 				alert("adios");
 				document.getElementById('btn_play').style.display="block";
-				document.getElementsByClassName('categoria_cuatro_r')[0].innerHTML = "Puntos: "+puntaje4;
+				document.getElementsByClassName('categoria_cuatro_r')[0].innerHTML = "ACIERTOS: "+aciertos4;
 			}
 			break;
 		default:
-			alert('Por favor ingresar Categoria válida');
+    			alert('Por favor ingresar Categoria válida');
 			preguntas();
 	}
-}	    
+}
