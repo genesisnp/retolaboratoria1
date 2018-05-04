@@ -10,8 +10,12 @@
 	justify-content: space-around;
 	padding: 2px;
 	border: thick solid;
+	margin-bottom: 15px;
 }
 .categoria h1{
 	display: inline-block;
 
+}
+#btn_play{
+	display: none;
 }
